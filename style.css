@@ -366,3 +366,134 @@ h1.home-title{
     transform:none !important;
   }
 }
+
+
+/* ===== LINUX PAGE ===== */
+code.inline{
+  font-family:var(--font-mono);
+  font-size:0.88em;
+  color:var(--orange);
+  background:var(--panel-2);
+  padding:1px 6px;
+  border-radius:3px;
+  white-space:nowrap;
+}
+.cmd .desc code.inline{padding:1px 5px; font-size:0.85em;}
+
+.terminal .kw{color:#c792ea;}
+.terminal .bar-link{
+  margin-left:auto;
+  color:var(--muted);
+  font-family:var(--font-mono);
+  font-size:0.78rem;
+  text-decoration:none;
+  background:none;
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:2px 10px;
+  cursor:pointer;
+  transition:color .2s ease, border-color .2s ease;
+}
+.terminal .bar-link:hover,
+.terminal .bar-link:focus-visible{color:var(--orange); border-color:var(--orange); outline:none;}
+
+/* hero terminal */
+.terminal.hero-term{
+  margin-top:0;
+  box-shadow:0 20px 50px -20px rgba(0,0,0,0.5);
+  opacity:0;
+  transform:translateY(10px) scale(0.98);
+  animation:frame-in 0.6s ease forwards;
+  animation-delay:.15s;
+}
+.terminal .cursor{
+  display:inline-block;
+  width:0.6em; height:1.1em;
+  background:var(--green);
+  vertical-align:text-bottom;
+  animation:blink 1.1s steps(1) infinite;
+}
+@keyframes blink{50%{opacity:0;}}
+
+/* distributions */
+.distros{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  margin-top:28px;
+}
+.distro{
+  background:var(--panel);
+  padding:24px 26px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.distro-head{display:flex; justify-content:space-between; align-items:baseline; gap:12px;}
+.distro h3{font-family:var(--font-head); font-size:1.3rem; font-weight:600;}
+.distro .pkg{
+  font-family:var(--font-mono);
+  font-size:0.78rem;
+  color:var(--green);
+  border:1px solid var(--line);
+  padding:2px 8px;
+  border-radius:4px;
+}
+.distro p{color:var(--muted); font-size:0.94rem; margin:0;}
+.distro .family{font-family:var(--font-mono); font-size:0.78rem; color:var(--muted); opacity:.8; margin-top:auto;}
+p.note{margin-top:20px; color:var(--muted); font-size:0.94rem;}
+
+h3.sub{font-size:1.05rem; margin:40px 0 0; font-weight:600;}
+h3.sub + p.lead{margin-top:8px;}
+h3.sub + .terminal{margin-top:16px;}
+
+/* interactive tty */
+.terminal.tty{cursor:text;}
+.tty-screen{
+  padding:20px 20px 0;
+  font-family:var(--font-mono);
+  font-size:0.88rem;
+  color:var(--text);
+  max-height:320px;
+  overflow-y:auto;
+  white-space:pre-wrap;
+}
+.tty-screen .ok{color:var(--green);}
+.tty-screen .err{color:#ef5350;}
+.tty-screen .prompt-line{color:var(--green); padding-bottom:20px;}
+.tty-input-row{
+  display:flex;
+  padding:0 20px 20px;
+  font-family:var(--font-mono);
+  font-size:0.88rem;
+}
+.tty-input-row[hidden]{display:none;}
+.tty-prompt{white-space:pre; color:var(--text);}
+.tty-input-row input{
+  flex:1;
+  min-width:0;
+  background:transparent;
+  border:none;
+  outline:none;
+  color:var(--text);
+  font:inherit;
+  caret-color:var(--green);
+  padding:0;
+}
+
+@media (max-width:720px){
+  .distros{grid-template-columns:1fr;}
+}
+@media (prefers-reduced-motion: reduce){
+  .terminal.hero-term, .terminal .cursor{
+    animation:none !important;
+    opacity:1 !important;
+    transform:none !important;
+  }
+}
+
+footer .credit{margin-top:8px; font-size:0.82rem; opacity:.8;}
+footer .credit a{color:var(--muted); text-decoration:underline; text-underline-offset:3px;}
+footer .credit a:hover{color:var(--orange);}
