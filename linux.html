@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux — операційна система GNU/Linux</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <a href="index.html" class="back-link">← На головну</a>
+  </div>
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow">операційні системи / linux</div>
+      <h1 class="title">У Linux усе — це файл.</h1>
+      <p class="subtitle">GNU/Linux — вільна Unix-подібна операційна система, на якій працюють більшість серверів інтернету, суперкомп'ютери, Android-смартфони та мільйони робочих станцій.</p>
+    </div>
+    <div class="terminal hero-term">
+      <div class="bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="label">student@ubuntu — bash</span>
+      </div>
+      <pre><span class="prompt">$</span> uname -o
+GNU/Linux
+<span class="prompt">$</span> whoami
+student
+<span class="prompt">$</span> ls /
+bin  boot  dev  etc  home  lib
+proc  root  tmp  usr  var
+<span class="prompt">$</span> <span class="cursor"></span></pre>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="intro">
+    <h2><span class="num">01</span>Коротко про GNU/Linux</h2>
+    <p>Історія системи складається з двох частин. У 1983 році Річард Столлман заснував проєкт GNU, мета якого — створити повністю вільну операційну систему. До початку 1990-х було готово майже все: компілятор, оболонка, утиліти, — бракувало лише ядра. У 1991 році фінський студент Лінус Торвальдс опублікував власне ядро Linux, і разом ці частини утворили повноцінну ОС — тому її правильна назва GNU/Linux.</p>
+    <p>Linux поширюється під ліцензією GNU GPL: будь-хто може використовувати, вивчати, змінювати й поширювати код. Саме тому існують сотні дистрибутивів — готових збірок, які поєднують ядро, системні утиліти, менеджер пакетів і графічне середовище.</p>
+
+    <div class="cards">
+      <div class="card">
+        <span class="mark">→</span>
+        <h3>Ядро (kernel)</h3>
+        <p>Керує процесором, пам'яттю, пристроями та процесами. Посередник між «залізом» і програмами.</p>
+      </div>
+      <div class="card">
+        <span class="mark">→</span>
+        <h3>Оболонка (shell)</h3>
+        <p>Командний інтерпретатор, найчастіше Bash. Приймає команди користувача та запускає програми.</p>
+      </div>
+      <div class="card">
+        <span class="mark">→</span>
+        <h3>Файлова система</h3>
+        <p>Єдине дерево каталогів від кореня <code class="inline">/</code>. Диски, флешки й навіть пристрої підключаються як частини цього дерева.</p>
+      </div>
+      <div class="card">
+        <span class="mark">→</span>
+        <h3>Багатокористувацькість</h3>
+        <p>Кожен користувач має власний каталог і права доступу; адміністратор — користувач <code class="inline">root</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="distros">
+    <h2><span class="num">02</span>Популярні дистрибутиви</h2>
+    <p class="lead">Дистрибутив — це ядро Linux плюс набір програм, менеджер пакетів і налаштування, зібрані в готову до встановлення систему.</p>
+
+    <div class="distros">
+      <div class="distro">
+        <div class="distro-head"><h3>Ubuntu</h3><span class="pkg">apt</span></div>
+        <p>Найпопулярніший дистрибутив для початківців і серверів. Виходить кожні пів року, LTS-версії підтримуються 5 років.</p>
+        <span class="family">родина Debian · Canonical</span>
+      </div>
+      <div class="distro">
+        <div class="distro-head"><h3>Debian</h3><span class="pkg">apt</span></div>
+        <p>Один із найстаріших (з 1993 р.) і найстабільніших дистрибутивів. Основа для Ubuntu, Mint та багатьох інших.</p>
+        <span class="family">незалежний · спільнота</span>
+      </div>
+      <div class="distro">
+        <div class="distro-head"><h3>Linux Mint</h3><span class="pkg">apt</span></div>
+        <p>Зручний перехід із Windows: знайомий вигляд робочого столу Cinnamon і все необхідне одразу після встановлення.</p>
+        <span class="family">родина Ubuntu · спільнота</span>
+      </div>
+      <div class="distro">
+        <div class="distro-head"><h3>Fedora</h3><span class="pkg">dnf</span></div>
+        <p>Сучасні версії програм і нові технології раніше за інших. Полігон для Red Hat Enterprise Linux.</p>
+        <span class="family">родина Red Hat · спільнота</span>
+      </div>
+      <div class="distro">
+        <div class="distro-head"><h3>Arch Linux</h3><span class="pkg">pacman</span></div>
+        <p>Мінімалістична система, яку користувач збирає сам. Безперервні оновлення (rolling release) та відома вікі-документація.</p>
+        <span class="family">незалежний · спільнота</span>
+      </div>
+      <div class="distro">
+        <div class="distro-head"><h3>openSUSE</h3><span class="pkg">zypper</span></div>
+        <p>Має дві гілки: стабільну Leap і rolling-версію Tumbleweed. Потужний інструмент налаштування YaST.</p>
+        <span class="family">незалежний · SUSE</span>
+      </div>
+    </div>
+    <p class="note">Для серверів також поширені Red Hat Enterprise Linux, Rocky Linux та AlmaLinux, для тестування безпеки — Kali Linux.</p>
+  </section>
+
+  <section id="commands">
+    <h2><span class="num">03</span>Команди Linux CLI</h2>
+    <p class="lead">Десять базових команд для навігації та роботи з файлами в терміналі.</p>
+
+    <div class="terminal">
+      <div class="bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="label">student@ubuntu — bash</span>
+      </div>
+      <pre><span class="comment"># створюємо проєкт, копіюємо й перейменовуємо файли</span>
+<span class="prompt">$</span> pwd
+/home/student
+<span class="prompt">$</span> mkdir <span class="flag">-p</span> practice/docs
+<span class="prompt">$</span> cd practice
+<span class="prompt">$</span> touch notes.txt
+<span class="prompt">$</span> echo <span class="str">"Привіт, Linux!"</span> &gt; notes.txt
+<span class="prompt">$</span> cp notes.txt docs/backup.txt
+<span class="prompt">$</span> mv notes.txt readme.txt
+<span class="prompt">$</span> ls <span class="flag">-l</span>
+drwxr-xr-x 2 student student 4096 Sep 27 12:10 docs
+-rw-r--r-- 1 student student   27 Sep 27 12:10 readme.txt
+<span class="prompt">$</span> rm docs/backup.txt
+<span class="prompt">$</span> history 3
+  9  ls -l
+ 10  rm docs/backup.txt
+ 11  history 3</pre>
+    </div>
+
+    <div class="cmd-list">
+      <div class="cmd"><span class="idx">01</span><code>pwd</code><span class="desc">Print Working Directory — показує повний шлях до поточного каталогу.</span></div>
+      <div class="cmd"><span class="idx">02</span><code>echo "текст"</code><span class="desc">Виводить текст або значення змінної, напр. <code class="inline">echo $HOME</code>. З <code class="inline">&gt;</code> записує текст у файл.</span></div>
+      <div class="cmd"><span class="idx">03</span><code>ls -la</code><span class="desc">Показує вміст каталогу. <code class="inline">-l</code> — детальний список, <code class="inline">-a</code> — разом із прихованими файлами.</span></div>
+      <div class="cmd"><span class="idx">04</span><code>cd [каталог]</code><span class="desc">Переходить до іншого каталогу. <code class="inline">cd ..</code> — на рівень вище, <code class="inline">cd ~</code> — у домашній.</span></div>
+      <div class="cmd"><span class="idx">05</span><code>touch [файл]</code><span class="desc">Створює порожній файл або оновлює час зміни існуючого.</span></div>
+      <div class="cmd"><span class="idx">06</span><code>mkdir -p [шлях]</code><span class="desc">Створює каталог. З <code class="inline">-p</code> — одразу всю вкладену структуру.</span></div>
+      <div class="cmd"><span class="idx">07</span><code>cp [звідки] [куди]</code><span class="desc">Копіює файли. Для каталогів потрібен ключ <code class="inline">-r</code> (рекурсивно).</span></div>
+      <div class="cmd"><span class="idx">08</span><code>mv [звідки] [куди]</code><span class="desc">Переміщує файл або каталог; у межах одного каталогу — перейменовує.</span></div>
+      <div class="cmd"><span class="idx">09</span><code>rm [файл]</code><span class="desc">Видаляє файл без кошика. <code class="inline">rm -r</code> — каталог із вмістом. Використовуйте обережно.</span></div>
+      <div class="cmd"><span class="idx">10</span><code>history</code><span class="desc">Показує список раніше введених команд; <code class="inline">!n</code> повторює команду з номером n.</span></div>
+    </div>
+  </section>
+
+  <section id="script">
+    <h2><span class="num">04</span>BASH-скрипт авторизації</h2>
+    <p>Скрипт імітує вхід у систему в текстовому режимі, як у консолі tty: запитує логін і пароль, приховує введення пароля, дає три спроби, а потім блокує доступ. Пароль у скрипті зберігається не відкритим текстом, а у вигляді хешу SHA-256 — так роблять і справжні системи у файлі <code class="inline">/etc/shadow</code>.</p>
+
+    <div class="terminal">
+      <div class="bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="label">auth.sh</span>
+        <a class="bar-link" href="auth.sh" download>завантажити</a>
+      </div>
+      <pre><span class="comment">#!/usr/bin/env bash</span>
+<span class="comment"># auth.sh — імітація авторизації в системі в текстовому режимі</span>
+<span class="comment"># Тестовий обліковий запис:  student / linux123</span>
+
+USERNAME=<span class="str">"student"</span>
+<span class="comment"># Пароль не зберігаємо відкритим текстом — лише його SHA-256 хеш</span>
+PASS_HASH=<span class="str">"791e4e58b732fdf54ab99f052d4e99d058fbe4bdd74e3463b8535e04d3d2da9d"</span>
+MAX_TRIES=3
+HOST=$(hostname)
+
+clear
+echo <span class="str">"GNU/Linux 6.8.0 ${HOST} tty1"</span>
+echo
+
+<span class="kw">for</span> (( try = 1; try &lt;= MAX_TRIES; try++ )); <span class="kw">do</span>
+    read <span class="flag">-r -p</span> <span class="str">"${HOST} login: "</span> login
+    read <span class="flag">-r -s -p</span> <span class="str">"Password: "</span> password     <span class="comment"># -s — символи не відображаються</span>
+    echo
+
+    input_hash=$(printf <span class="str">'%s'</span> <span class="str">"$password"</span> | sha256sum | cut <span class="flag">-d</span> <span class="str">' '</span> <span class="flag">-f</span> 1)
+
+    <span class="kw">if</span> [[ <span class="str">"$login"</span> == <span class="str">"$USERNAME"</span> &amp;&amp; <span class="str">"$input_hash"</span> == <span class="str">"$PASS_HASH"</span> ]]; <span class="kw">then</span>
+        echo
+        echo <span class="str">"Last login: $(date '+%a %b %d %H:%M:%S %Y') on tty1"</span>
+        echo <span class="str">"Вітаємо, ${login}! Вхід виконано успішно."</span>
+        echo <span class="str">"Домашній каталог: /home/${login}"</span>
+        exit 0
+    <span class="kw">fi</span>
+
+    sleep 1                                  <span class="comment"># затримка ускладнює підбір пароля</span>
+    echo <span class="str">"Login incorrect"</span>
+    left=$(( MAX_TRIES - try ))
+    <span class="kw">if</span> (( left &gt; 0 )); <span class="kw">then</span>
+        echo <span class="str">"Залишилось спроб: ${left}"</span>
+    <span class="kw">fi</span>
+<span class="kw">done</span>
+
+echo <span class="str">"Забагато невдалих спроб. Доступ тимчасово заблоковано."</span>
+exit 1</pre>
+    </div>
+
+    <h3 class="sub">Як запустити</h3>
+    <div class="terminal">
+      <div class="bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="label">student@ubuntu — bash</span>
+      </div>
+      <pre><span class="prompt">$</span> chmod +x auth.sh   <span class="comment"># дозволити виконання</span>
+<span class="prompt">$</span> ./auth.sh</pre>
+    </div>
+
+    <h3 class="sub">Спробуйте прямо тут</h3>
+    <p class="lead">Браузерна копія скрипта працює за тією ж логікою. Логін <code class="inline">student</code>, пароль <code class="inline">linux123</code>.</p>
+    <div class="terminal tty" id="tty">
+      <div class="bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="label">tty1</span>
+        <button class="bar-link" id="tty-reset" type="button">перезапустити</button>
+      </div>
+      <div class="tty-screen" id="tty-screen" aria-live="polite"></div>
+      <label class="tty-input-row" id="tty-row">
+        <span class="tty-prompt" id="tty-prompt"></span>
+        <input id="tty-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Введення в терміналі">
+      </label>
+    </div>
+  </section>
+
+  <section id="sources">
+    <h2><span class="num">05</span>Джерела інформації</h2>
+    <ul class="sources">
+      <li><a href="https://www.kernel.org/" target="_blank" rel="noopener">The Linux Kernel Archives</a><span>kernel.org</span></li>
+      <li><a href="https://www.gnu.org/gnu/linux-and-gnu.html" target="_blank" rel="noopener">Linux and the GNU System</a><span>gnu.org</span></li>
+      <li><a href="https://www.gnu.org/software/bash/manual/" target="_blank" rel="noopener">GNU Bash Reference Manual</a><span>gnu.org</span></li>
+      <li><a href="https://linuxcommand.org/tlcl.php" target="_blank" rel="noopener">The Linux Command Line — безкоштовна книга</a><span>linuxcommand.org</span></li>
+      <li><a href="https://man7.org/linux/man-pages/" target="_blank" rel="noopener">Linux man pages online</a><span>man7.org</span></li>
+      <li><a href="https://linuxjourney.com/" target="_blank" rel="noopener">Linux Journey — інтерактивний курс</a><span>linuxjourney.com</span></li>
+      <li><a href="https://distrowatch.com/" target="_blank" rel="noopener">DistroWatch — огляд дистрибутивів</a><span>distrowatch.com</span></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <div>linux · операційна система GNU/Linux</div>
+  <div class="credit">Сайт створено за допомогою <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a> — AI-асистента від Anthropic.</div>
+</footer>
+
+<script>
+(function () {
+  const USERNAME = "student";
+  const PASS_HASH = "791e4e58b732fdf54ab99f052d4e99d058fbe4bdd74e3463b8535e04d3d2da9d";
+  const MAX_TRIES = 3;
+  const HOST = "ubuntu";
+
+  const screen = document.getElementById("tty-screen");
+  const row = document.getElementById("tty-row");
+  const prompt = document.getElementById("tty-prompt");
+  const input = document.getElementById("tty-input");
+
+  let stage, tries, login, busy;
+
+  function print(text, cls) {
+    const line = document.createElement("div");
+    if (cls) line.className = cls;
+    line.textContent = text;
+    screen.appendChild(line);
+    screen.scrollTop = screen.scrollHeight;
+  }
+
+  async function sha256(text) {
+    if (window.crypto && crypto.subtle) {
+      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+      return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("");
+    }
+    return text === "linux123" ? PASS_HASH : "";   // запасний варіант без crypto.subtle
+  }
+
+  function ask(which) {
+    stage = which;
+    prompt.textContent = which === "login" ? HOST + " login: " : "Password: ";
+    input.type = which === "login" ? "text" : "password";
+    input.value = "";
+    row.hidden = false;
+  }
+
+  function start() {
+    screen.innerHTML = "";
+    tries = 1; busy = false;
+    print("GNU/Linux 6.8.0 " + HOST + " tty1");
+    print("\u00a0");
+    ask("login");
+  }
+
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+  input.addEventListener("keydown", async (e) => {
+    if (e.key !== "Enter" || busy) return;
+    const value = input.value;
+
+    if (stage === "login") {
+      print(HOST + " login: " + value);
+      login = value;
+      ask("password");
+      return;
+    }
+
+    print("Password: ");            // пароль не відображається, як у read -s
+    busy = true; row.hidden = true;
+    const ok = login === USERNAME && (await sha256(value)) === PASS_HASH;
+
+    if (ok) {
+      const d = new Date().toString().split(" GMT")[0];
+      print("\u00a0");
+      print("Last login: " + d + " on tty1");
+      print("Вітаємо, " + login + "! Вхід виконано успішно.", "ok");
+      print("Домашній каталог: /home/" + login);
+      print(login + "@" + HOST + ":~$", "prompt-line");
+      return;
+    }
+
+    await sleep(1000);
+    print("Login incorrect", "err");
+    const left = MAX_TRIES - tries;
+    if (left > 0) {
+      print("Залишилось спроб: " + left);
+      print("\u00a0");
+      tries++; busy = false;
+      ask("login");
+      input.focus();
+    } else {
+      print("\u00a0");
+      print("Забагато невдалих спроб. Доступ тимчасово заблоковано.", "err");
+    }
+  });
+
+  document.getElementById("tty").addEventListener("click", (e) => {
+    if (!row.hidden && e.target.tagName !== "BUTTON") input.focus();
+  });
+  document.getElementById("tty-reset").addEventListener("click", () => { start(); input.focus(); });
+
+  start();
+})();
+</script>
+
+</body>
+</html>
